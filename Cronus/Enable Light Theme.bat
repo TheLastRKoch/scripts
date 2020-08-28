@@ -1,0 +1,1 @@
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 1
