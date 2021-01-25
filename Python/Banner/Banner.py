@@ -2,27 +2,39 @@ import requests
 import json
 import os
 
-hostname = os.popen("hostname").read().strip()
+def clear(host_os):
+	keyword = ""
+	if host_os == "Windows":
+		keyword = "cls"
+	else:
+		keyword = "clear"
+	os.system(keyword)
 
-try:
+def main():
+	hostname = os.popen("hostname").read().strip()
 
-	#Process Json data
-	json_file = open("config.json")
-	data = json.load(json_file)
-	child = (data["Repositories"])
-	setting = child[hostname]
-	host_url = setting["url"]
-	host_os = setting["os"]
+	try:
 
-	os.system("clear")
-	print("...")
+		#Process Json data
+		json_file = open("config.json")
+		data = json.load(json_file)
+		child = (data["Repositories"])
+		setting = child[hostname]
+		host_url = setting["url"]
+		host_os = setting["os"]
 
-	req = requests.get(host_url)
-	os.system("clear")
-	if host_os == "Linux":
-		print(os.popen("neofetch").read())
-	print("")
-	print(req.text)
+		clear(host_os)
+		print("Processing ...")
 
-except KeyError:
-	print ("Error: there's no configuration for the hostname:  "+str(hostname))
+		req = requests.get(host_url)
+		clear(host_os)
+		if host_os == "Linux":
+			print(os.popen("neofetch").read())
+		print("")
+		print(req.text)
+
+	except KeyError:
+		print ("Error: there's no configuration for the hostname:  "+str(hostname))
+
+if __name__ == '__main__':
+    main()
