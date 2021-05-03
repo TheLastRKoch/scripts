@@ -1,18 +1,16 @@
 {
-	"Repositories":{
+	"base_url":"https://gist.githubusercontent.com/TheLastRKoch/b6cd4ac1f61321effe76ee6511c27d3c/raw/246d4fd120c2077d98e95ee4998d8e03bdb57346",
+	"repositories":{
 		"W10-Cronus-RK":{
 			"os":"Windows",
-			"url":"https://gist.githubusercontent.com/TheLastRKoch/b6cd4ac1f61321effe76ee6511c27d3c/raw/ef76fcf9ef20501b447eeb14c0956aa9b4d9560f/Ubu-Oceanus-RK",
 			"has_neofetch": false
 		},
 		"Ubu-Oceanus-RK":{
 			"os":"Linux",
-			"url":"https://gist.githubusercontent.com/TheLastRKoch/b6cd4ac1f61321effe76ee6511c27d3c/raw/ef76fcf9ef20501b447eeb14c0956aa9b4d9560f/W10-Cronus-RK",
 			"has_neofetch": true
 		},
 		"CQHD-LT100476":{
 			"os":"Mac",
-			"url":"https://pastebin.com/raw/7JArMLME",
 			"has_neofetch": false
 		}
 	}
